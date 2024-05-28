@@ -138,7 +138,9 @@ class Card:
     def __str__(self):
         return f"{self.rank} of {self.suit}"
 
-# So getting the order wrong, like we've done above we end up saying Queen < Jack (FALSE) then we move to suit evaluate DIAMOND < SPADES (TRUE). uh, oh we've returned an errorenous result.
+# So getting the order wrong, like we've done above we end up saying Queen < Jack (FALSE)
+# then we move to suit evaluate DIAMOND < SPADES (TRUE).
+# uh, oh we've returned an errorenous result.
 # Rank Inputs: Queen     Jack
 # Suit Inputs: Diamonds  Spades
 #
