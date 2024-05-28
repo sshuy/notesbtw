@@ -6,7 +6,8 @@ Instead just handle the cases you are looking for and raise an exception otherwi
 
 ### Return all possible results before raising an exception. (Not 100% sure how I feel but oh well.)
 **Bad Example:**
-**Note:** *It's important to fail early, but here I think having the exception at the end after checking all cases, works better, than having to provide all the cases required to raise an exception/failure.
+
+**Note:** *It's important to fail early, but here I think having the exception at the end after checking all cases, works better, than having to provide all the cases required to raise an exception/failure.*
 ```python
 # Bad :(
 class Sword:
@@ -37,19 +38,19 @@ class Sword:
             return Sword("steel")
     raise Exception("can not craft")
 ```
-### Ordering is so ==very fucking important== when it comes to control flow, like seriously...
+### Ordering is so VERY FUCKING IMPORTANT when it comes to control flow, like seriously...
 Okay so we have a task where we are implemented overloads on operators on our custom class type, lets build this example.
-- Class called **Card**
+- Class called 'Card'
     - Members
-        - Rank
-        - Rank Index
-        - Suit
-        - Suit Index
+        - Rank [2, 3, 4... Jack, Queen, King, Ace] (Strings btw)
+        - Rank Index - Position in the rank array
+        - Suit [Clubs, Diamonds, Hearts, Spades] (Strings btw)
+        - Suit Index - Position in the rank array
 
 Now we want to implement three operator overloads.
-- Add
-- Less Than
-- Greater Than
+- Add [+]
+- Less Than [<]
+- Greater Than [>]
 
 The evaluation of each of these overloads depend on this implementation
 > A card is "greater than" another card if it has a higher rank. However, if the ranks are the same, the card with the higher suit is "greater than" the other card. This same logic applies to the "less than" operator. The "equal to" operator should check that the rank AND suit are equal.
@@ -59,7 +60,12 @@ Now initially reading that implementation how would you implement the solution? 
 - Checking if the card ranks are equal to eachother?
 - Checking if the card suit is greater than the other card suit?
 
-The answer is *Checking if the card ranks are equal to eachother*. The other choices if chosen will result in you scratching your head going, man this works on like 90% of the cases, but two keep failing. Why??? Well checking if the card is greater than the other, should be the final check right? Because if that check is true then you're good and you can return out YAY, but doing so results in you missing a lot of edge cases. Trust me...
+The answer is...
+
+*Checking if the card ranks are equal to eachother*.
+
+The other choices if chosen will result in you scratching your head going, man this works on like 90% of the cases, but two keep failing. Why??? Well checking if the card is greater than the other, should be the final check right? Because if that check is true then you're good and you can return out YAY, but doing so results in you missing a lot of edge cases. Trust me...
+
 **Working Example**
 ```python
 import random
