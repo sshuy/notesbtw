@@ -19,7 +19,7 @@ Did you know that Git actually snapshots the entire list of files on a *per-comm
 
 Even though Git stores entire snapshots, it does do some performance optimizations so that your hidden *.git* directory doesn't get to big for his **BOOTS**
 
-- [Compresses and packs](https://git-scm.com/book/en/v2/Git-Internals-Packfiles)files to stoer them more effciently.
+- [Compresses and packs](https://git-scm.com/book/en/v2/Git-Internals-Packfiles) files to store them more effciently.
 - Removes duplicate files that are the same across multiple commits. EG: if a file remains the same from one commit to the next. We only store that file once.
 
 ## Git Configuration
@@ -32,6 +32,9 @@ Important arguments/flags for **git config**
 
 **Examples:**
 > git config --add --global user.name "awesomedude"
+
 > git config --get user.name    [This would output 'awesomedude']
+
 > git config --add monkey.doo "loo" [This would add monkey.doo as a configuration value, its important to note that you can add useless config values there isn't a limitation]
+
 > git config --unset monkey.doo [Removes monkey.doo from the config]
