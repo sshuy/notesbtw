@@ -21,3 +21,6 @@ Even though Git stores entire snapshots, it does do some performance optimizatio
 
 - [Compresses and packs](https://git-scm.com/book/en/v2/Git-Internals-Packfiles)files to stoer them more effciently.
 - Removes duplicate files that are the same across multiple commits. EG: if a file remains the same from one commit to the next. We only store that file once.
+
+## Git Configuration
+<ins>TODO:</ins>
