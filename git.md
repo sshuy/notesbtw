@@ -1,6 +1,6 @@
 # Git Tips and Tricks
 
-## Searching through a log.
+## Searching through a log
 Repositories of course... can have very long logs due to a vast amount of commits to the project during its lifecycle. All commits represent the *full state* of the repository at a given point in time.
 
 We can use the <ins>git log</ins> command to see the history of commits in a repo. This command shows
@@ -23,4 +23,15 @@ Even though Git stores entire snapshots, it does do some performance optimizatio
 - Removes duplicate files that are the same across multiple commits. EG: if a file remains the same from one commit to the next. We only store that file once.
 
 ## Git Configuration
-<ins>TODO:</ins>
+Important arguments/flags for **git config**
+- --add    [Required flag to add a configuration value]
+- --get    [This flag paired with a key.value will return the data from that configuration value]
+- --global [Sets the configuration value for your git config globally]
+- --local  [Sets the configuration value for in your git config locally, which would be the local repo]
+- --unset  [Removes a configuration value from the git config, can handle global and local]
+
+**Examples:**
+> git config --add --global user.name "awesomedude"
+> git config --get user.name    [This would output 'awesomedude']
+> git config --add monkey.doo "loo" [This would add monkey.doo as a configuration value, its important to note that you can add useless config values there isn't a limitation]
+> git config --unset monkey.doo [Removes monkey.doo from the config]
