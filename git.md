@@ -51,3 +51,16 @@ Important arguments/flags for **git config**
 > git config --add monkey.doo "loo" [This would add monkey.doo as a configuration value, its important to note that you can add useless config values there isn't a limitation]
 
 > git config --unset monkey.doo [Removes monkey.doo from the config]
+
+
+## Git Configuration Locations
+*System:* **/etc/gitconfig**, a file that configures Git for all users on the system.
+*Global:* **~/.gitconfig**, a file that configurures Git for all projects assigned to specific user.
+*Local:* **.git/config**, a file that configures Git for a specific project, hence the name local.
+*Worktree:* **.git/config.worktree**, a file that configures Git for part of a project. 
+
+Pretty much all of the time you'll be working with **Global** and **Local** configuration locations. It is rare to fiddle with the others. Still important to know about however.
+
+Here is the hierarchy layout:
+**The more specific/less general the location, is the config that will take priority!!**
+[![Git location hierarchy](https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/e4S7M9u.png)
