@@ -81,3 +81,9 @@ We can swap from master to main by doing the following.
     > git branch -m master main
 
 3. Now when you run `git branch` you'll see that the branch has swapped from *master* to *main*
+
+
+Switching between branches can be done with both `git checkout <branch-name>` or `git switch <branch-name>`. *git switch* is a newer command and more intuitive, so prefer `git switch` over `git checkout` when swapping branches.
+
+## Merging oh-boy! Lets dive in.
+- Only discovered surface level swimming haven't swam down into the *plumming* yet *wink wink*
