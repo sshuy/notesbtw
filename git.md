@@ -63,4 +63,5 @@ Pretty much all of the time you'll be working with **Global** and **Local** conf
 
 Here is the hierarchy layout:
 **The more specific/less general the location, is the config that will take priority!!**
-[![Git location hierarchy](https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/e4S7M9u.png)
+
+![Git location hierarchy](https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/e4S7M9u.png)
