@@ -25,10 +25,23 @@ Even though Git stores entire snapshots, it does do some performance optimizatio
 ## Git Configuration
 Important arguments/flags for **git config**
 - --add    [Required flag to add a configuration value]
+- --list   [Lists the currently set configuration values can add --local to this to only display local values]
 - --get    [This flag paired with a key.value will return the data from that configuration value]
 - --global [Sets the configuration value for your git config globally]
 - --local  [Sets the configuration value for in your git config locally, which would be the local repo]
 - --unset  [Removes a configuration value from the git config, can handle global and local]
+- --unset-all  [Purges all instances of a key from the config]
+- --remove-section [Removes an entire section from a git config]
+    So lets say you have your **[core]** section that contains
+    - filemode = true
+    - bare = false
+    - etc...
+    
+    and we have another section lets say hypothetical its called **[useless]** and in there we have
+    - favpizza = "Pineapple"
+    - bestukcountry = "Wales"
+
+    We can remove this entire section using the *--remove-section* flag, instead of removing each key/value one-by-one.
 
 **Examples:**
 > git config --add --global user.name "awesomedude"
