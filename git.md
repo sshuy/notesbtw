@@ -65,3 +65,19 @@ Here is the hierarchy layout:
 **The more specific/less general the location, is the config that will take priority!!**
 
 ![Git location hierarchy](https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/e4S7M9u.png)
+
+
+## Branching :)
+Git uses **master** as its standard default branch.
+GitHub uses **main** as its standard default branch.
+
+General guidance is to use the platforms default branch name. As we will be using *GitHub* our default branch name should be **main**
+
+We can swap from master to main by doing the following.
+1. Swapping the `init.defaultBranch` key from *master* to *main*
+    > git config --global init.defaultbranch "main"
+
+2. Then we need to actually rename our main branch using
+    > git branch -m master main
+
+3. Now when you run `git branch` you'll see that the branch has swapped from *master* to *main*
